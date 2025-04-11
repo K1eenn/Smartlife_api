@@ -125,3 +125,5 @@ class SessionManager:
                   logger.info("Không có session cũ nào cần xóa.")
         else:
             logger.info("Không có session cũ nào cần xóa.")
+
+session_manager = SessionManager()

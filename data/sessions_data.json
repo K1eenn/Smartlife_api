@@ -1,0 +1,261 @@
+{
+  "23025157": {
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Xin chào"
+          }
+        ]
+      },
+      {
+        "content": "<p>Xin chào! Tôi là HGDS, trợ lý gia đình của bạn. Tôi có thể giúp gì cho bạn hôm nay?</p>",
+        "role": "assistant",
+        "annotations": []
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Đặt lịch xem phim vào tối nay"
+          }
+        ]
+      },
+      {
+        "content": "<p>Xin vui lòng cho tôi biết tên bộ phim bạn muốn xem và thời gian cụ thể (nếu không phải là 19:00) để tôi có thể đặt lịch cho bạn nhé!</p>",
+        "role": "assistant",
+        "annotations": []
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Đặt lịch đi chơi vào ngày mai"
+          }
+        ]
+      },
+      {
+        "content": "<p>Xin vui lòng cho tôi biết chi tiết về hoạt động đi chơi mà bạn muốn thực hiện vào ngày mai, bao gồm tên hoạt động và thời gian (nếu bạn có thời gian cụ thể). Sau đó, tôi sẽ giúp bạn đặt lịch!</p>",
+        "role": "assistant",
+        "annotations": []
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Tin tức hôm nay"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Tin tức hôm nay"
+          }
+        ]
+      },
+      {
+        "content": "<p><b>Tin tức mới nhất ngày 10 tháng 4 năm 2025:</b></p>\n\n<ul>\n    <li><b>Giá xăng, dầu đồng loạt giảm:</b> Liên Bộ Công Thương – Tài chính đã thông báo về việc giảm giá xăng dầu, một tin tức được nhiều người tiêu dùng quan tâm (Nguồn: <a href=\"https://baochinhphu.vn/tin-moi.htm\">Chính phủ</a>).</li>\n    \n    <li><b>U.17 Việt Nam quyết đấu vì giấc mơ World Cup:</b> Đội tuyển U.17 Việt Nam đã có hai trận hòa trước Úc và Nhật Bản, và đang chuẩn bị cho trận đấu quyết định với U.17 UAE vào lúc 22 giờ hôm nay (Nguồn: <a href=\"https://thanhnien.vn/tin-tuc-dac-biet-tren-bao-in-thanh-nien-1042025-185250409235227862.htm\">Thanh Niên</a>).</li>\n    \n    <li><b>Thương chiến Mỹ - Trung gia tăng căng thẳng:</b> Mỹ đã bổ sung thêm 50% thuế đối với hàng hóa Trung Quốc, và Bắc Kinh đã có động thái đáp trả tương tự, cho thấy tình hình thương mại giữa hai nước đang trở nên căng thẳng hơn (Nguồn: <a href=\"https://thanhnien.vn/tin-tuc-dac-biet-tren-bao-in-thanh-nien-1042025-185250409235227862.htm\">Thanh Niên</a>).</li>\n    \n    <li><b>Chương trình nghệ thuật \"Hẹn ước Bắc - Nam\":</b> Ban Tổ chức đã họp báo giới thiệu chương trình này, nhân dịp kỷ niệm 50 năm Ngày Giải phóng miền Nam, thống nhất đất nước (30/4/1975 - 30/4/2025) (Nguồn: <a href=\"https://baochinhphu.vn/tin-moi.htm\">Chính phủ</a>).</li>\n    \n    <li><b>Hợp tác giữa Chelsea và FPT:</b> CLB Chelsea đã công bố thiết lập quan hệ hợp tác toàn cầu với Tập đoàn FPT nhằm nâng cao trải nghiệm cho người hâm mộ (Nguồn: <a href=\"https://baochinhphu.vn/tin-moi.htm\">Chính phủ</a>).</li>\n</ul>\n\n<p>Những thông tin trên phản ánh các sự kiện quan trọng diễn ra trong ngày 10 tháng 4 năm 2025, từ thể thao đến kinh tế và văn hóa.</p>",
+        "role": "assistant",
+        "annotations": []
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Đặt lịch đi chơi tối nay"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_qSLnUdFl5n7kcDxvOf4visqM",
+            "function": {
+              "arguments": "{\"title\":\"Đi chơi\",\"date_description\":\"tối nay\",\"time\":\"19:00\",\"description\":\"Đi chơi cùng bạn bè.\"}",
+              "name": "add_event"
+            },
+            "type": "function"
+          }
+        ],
+        "annotations": []
+      },
+      {
+        "tool_call_id": "call_qSLnUdFl5n7kcDxvOf4visqM",
+        "role": "tool",
+        "name": "add_event",
+        "content": "Đã thực thi thành công add_event."
+      },
+      {
+        "content": "<p>Lịch đi chơi vào tối nay đã được đặt thành công! Nếu bạn cần thêm thông tin hoặc muốn thay đổi gì đó, hãy cho tôi biết nhé!</p>",
+        "role": "assistant",
+        "annotations": []
+      }
+    ],
+    "current_member": "kienht157",
+    "suggested_question": null,
+    "process_suggested": false,
+    "question_cache": {},
+    "created_at": "2025-04-10T17:02:37.050158",
+    "last_updated": "2025-04-10T17:11:34.138129"
+  },
+  "23025158": {
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Đặt lịch học tiếng anh tối thứ 6 hàng tuần"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_gc6PWBnNH732iVE0xPByWhQS",
+            "function": {
+              "arguments": "{\"title\":\"Học tiếng Anh\",\"date_description\":\"thứ 6 hàng tuần\",\"time\":\"19:00\",\"description\":\"Học tiếng Anh hàng tuần.\"}",
+              "name": "add_event"
+            },
+            "type": "function"
+          }
+        ],
+        "annotations": []
+      },
+      {
+        "tool_call_id": "call_gc6PWBnNH732iVE0xPByWhQS",
+        "role": "tool",
+        "name": "add_event",
+        "content": "Đã thực thi thành công add_event."
+      },
+      {
+        "content": "Lịch học tiếng Anh vào tối thứ 6 hàng tuần đã được thiết lập thành công. Nếu bạn cần thêm thông tin hoặc hỗ trợ gì khác, hãy cho tôi biết nhé!",
+        "role": "assistant",
+        "annotations": []
+      }
+    ],
+    "current_member": "kienht158",
+    "suggested_question": null,
+    "process_suggested": false,
+    "question_cache": {},
+    "created_at": "2025-04-10T17:12:14.971723",
+    "last_updated": "2025-04-10T17:12:22.711391"
+  },
+  "23025159": {
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Đặt lịch đi chơi vào thứ 6"
+          }
+        ]
+      },
+      {
+        "content": "Bạn có thể cho tôi biết thêm thông tin về sự kiện này không? Ví dụ, bạn muốn đặt tiêu đề là gì, thời gian cụ thể và mô tả sự kiện (nếu có)?",
+        "role": "assistant",
+        "annotations": []
+      }
+    ],
+    "current_member": "kienht159",
+    "suggested_question": null,
+    "process_suggested": false,
+    "question_cache": {},
+    "created_at": "2025-04-10T17:12:47.308875",
+    "last_updated": "2025-04-10T17:12:53.586504"
+  },
+  "23025160": {
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Đặt lịch đi chơi vào thứ 6"
+          }
+        ]
+      },
+      {
+        "content": "Bạn có muốn cung cấp thêm thông tin về sự kiện đi chơi này không? Ví dụ như tiêu đề của sự kiện, thời gian và mô tả chi tiết (nếu có).",
+        "role": "assistant",
+        "annotations": []
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Đặt lịch đi chơi vào thứ 3 tuần sau"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_3JAti4dSigzvJKntfkiD2Knd",
+            "function": {
+              "arguments": "{\"title\":\"Đi chơi\",\"date_description\":\"thứ 3 tuần sau\",\"time\":\"19:00\",\"description\":\"Đi chơi với gia đình.\"}",
+              "name": "add_event"
+            },
+            "type": "function"
+          }
+        ],
+        "annotations": []
+      },
+      {
+        "tool_call_id": "call_3JAti4dSigzvJKntfkiD2Knd",
+        "role": "tool",
+        "name": "add_event",
+        "content": "Đã thực thi thành công add_event."
+      },
+      {
+        "content": "Lịch đi chơi vào thứ 3 tuần sau đã được đặt thành công! Nếu bạn cần thêm thông tin hoặc điều chỉnh gì khác, hãy cho tôi biết nhé!",
+        "role": "assistant",
+        "annotations": []
+      }
+    ],
+    "current_member": "kienht160",
+    "suggested_question": null,
+    "process_suggested": false,
+    "question_cache": {},
+    "created_at": "2025-04-10T17:13:16.572694",
+    "last_updated": "2025-04-10T17:13:58.530757"
+  },
+  "23025161": {
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Đặt lịch đi chơi vào thứ 6"
+          }
+        ]
+      },
+      {
+        "content": "Bạn có thể cho tôi biết thêm chi tiết về lịch đi chơi này không? Ví dụ như tiêu đề sự kiện, thời gian cụ thể và mô tả nếu có.",
+        "role": "assistant",
+        "annotations": []
+      }
+    ],
+    "current_member": "kienht161",
+    "suggested_question": null,
+    "process_suggested": false,
+    "question_cache": {},
+    "created_at": "2025-04-10T17:21:50.243269",
+    "last_updated": "2025-04-10T17:21:58.217006"
+  }
+}

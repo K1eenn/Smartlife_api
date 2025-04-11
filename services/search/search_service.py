@@ -273,4 +273,4 @@ Trình bày thông tin sử dụng HTML đơn giản và định dạng dễ đ�
 
     except Exception as e:
         logger.error(f"Lỗi trong quá trình tìm kiếm và tổng hợp cho '{query}': {e}", exc_info=True)
-        return f"Có lỗi xảy ra trong quá trình tìm kiếm và tổng hợp thông tin: {str(e)}"
+        return f"Có lỗi xảy ra trong quá trình tìm kiếm và tổng hợp thông tin: {str(e)}"    

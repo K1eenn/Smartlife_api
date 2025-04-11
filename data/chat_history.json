@@ -1,0 +1,25 @@
+{
+  "kienht161": [
+    {
+      "timestamp": "2025-04-10T17:21:58.070743",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Đặt lịch đi chơi vào thứ 6"
+            }
+          ]
+        },
+        {
+          "content": "Bạn có thể cho tôi biết thêm chi tiết về lịch đi chơi này không? Ví dụ như tiêu đề sự kiện, thời gian cụ thể và mô tả nếu có.",
+          "role": "assistant",
+          "annotations": []
+        }
+      ],
+      "summary": "Người dùng yêu cầu đặt lịch đi chơi vào thứ 6 và cần cung cấp thêm thông tin chi tiết.",
+      "session_id": "23025161"
+    }
+  ]
+}

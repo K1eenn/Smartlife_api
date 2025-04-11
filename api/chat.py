@@ -10,7 +10,7 @@ from fastapi.responses import StreamingResponse
 from openai import OpenAI
 from openai.types.chat import ChatCompletionMessage, ChatCompletionMessageToolCall
 
-from config.settings import openai_model, OPENWEATHERMAP_API_KEY
+from config.settings import openai_model, OPENWEATHERMAP_API_KEY, VIETNAMESE_NEWS_DOMAINS
 from config.logging_config import logger
 from models.schemas import ChatRequest, ChatResponse, Message, MessageContent
 from core.session_manager import session_manager

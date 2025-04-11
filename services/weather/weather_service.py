@@ -268,3 +268,86 @@ class WeatherService:
             "icon": "01d",
             "icon_url": "https://openweathermap.org/img/wn/01d@2x.png"
         }
+
+def format_weather_for_prompt(weather_data, forecast_data=None):
+    """
+    Định dạng dữ liệu thời tiết thành text để đưa vào prompt.
+    
+    Args:
+        weather_data: Dữ liệu thời tiết hiện tại
+        forecast_data: Dữ liệu dự báo thời tiết
+        
+    Returns:
+        Chuỗi thông tin thời tiết
+    """
+    result = []
+    
+    # Kiểm tra xem weather_data có dữ liệu không
+    if not weather_data:
+        return "Không có thông tin thời tiết."
+        
+    # Lấy thông tin địa điểm
+    location_name = weather_data.get("location", {}).get("name", "")
+    country = weather_data.get("location", {}).get("country", "")
+    
+    # Đảm bảo luôn có thông tin địa điểm
+    if not location_name:
+        location_name = "Hà Nội"
+        country = "VN"
+        
+    location_str = f"{location_name}, {country}" if country else location_name
+    
+    # Thời tiết hiện tại
+    current = weather_data.get("current", {})
+    if current:
+        temp = current.get("temp")
+        feels_like = current.get("feels_like")
+        humidity = current.get("humidity")
+        weather_desc = current.get("weather", {}).get("description", "")
+        wind_speed = current.get("wind", {}).get("speed")
+        
+        current_date_str = current.get("date").strftime("%d/%m/%Y %H:%M") if isinstance(current.get("date"), datetime.datetime) else "hiện tại"
+        
+        result.append(f"Thời tiết hiện tại tại {location_str} ({current_date_str}):")
+        if temp is not None:
+            result.append(f"- Nhiệt độ: {temp}°C (cảm giác như {feels_like}°C)")
+        if weather_desc:
+            result.append(f"- Thời tiết: {weather_desc}")
+        if humidity is not None:
+            result.append(f"- Độ ẩm: {humidity}%")
+        if wind_speed is not None:
+            result.append(f"- Gió: {wind_speed} m/s")
+            
+    # Dự báo thời tiết
+    if forecast_data and forecast_data.get("forecast"):
+        result.append("\nDự báo thời tiết:")
+        
+        # Chỉ hiển thị 3 ngày đầu tiên
+        for i, day in enumerate(forecast_data.get("forecast", [])[:3]):
+            date_str = day.get("date", "")
+            day_of_week = datetime.datetime.strptime(date_str, "%Y-%m-%d").strftime("%A") if date_str else ""
+            
+            # Chuyển đổi sang tiếng Việt
+            day_of_week_vi = {
+                "Monday": "Thứ Hai",
+                "Tuesday": "Thứ Ba",
+                "Wednesday": "Thứ Tư",
+                "Thursday": "Thứ Năm",
+                "Friday": "Thứ Sáu",
+                "Saturday": "Thứ Bảy",
+                "Sunday": "Chủ Nhật"
+            }.get(day_of_week, day_of_week)
+            
+            formatted_date = datetime.datetime.strptime(date_str, "%Y-%m-%d").strftime("%d/%m/%Y") if date_str else ""
+            weather_desc = day.get("main_weather", {}).get("description", "")
+            temp_min = day.get("temp_min")
+            temp_max = day.get("temp_max")
+            
+            result.append(f"\n- {day_of_week_vi}, {formatted_date}:")
+            result.append(f"  Thời tiết: {weather_desc}")
+            result.append(f"  Nhiệt độ: {temp_min}°C đến {temp_max}°C")
+    
+    # Thêm ghi chú
+    result.append(f"\n(Dữ liệu thời tiết cho khu vực: {location_str})")
+    
+    return "\n".join(result)

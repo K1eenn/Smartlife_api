@@ -26,7 +26,7 @@ tool_functions = {
 def execute_tool_call(tool_call: ChatCompletionMessageToolCall, current_member_id: Optional[str]) -> Tuple[Optional[Dict[str, Any]], str]:
     """
     Executes the appropriate Python function based on the tool call.
-    Handles date calculation and event classification for event tools.
+    Handles date calculation and event classification for event tools. # MODIFIED
     Returns a tuple: (event_data_for_frontend, tool_result_content_for_llm)
     """
     function_name = tool_call.function.name
@@ -40,11 +40,11 @@ def execute_tool_call(tool_call: ChatCompletionMessageToolCall, current_member_i
 
         logger.info(f"Executing tool: {function_name} with args: {arguments}")
 
-        # --- Special Handling for Event Dates and Classification ---
+        # --- Special Handling for Event Dates and Classification --- # MODIFIED
         final_date_str = None
         repeat_type = "ONCE"
         cron_expression = ""
-        event_category = "General" # Default category
+        event_category = "General" # Default category # ADDED
         event_action_data = None
 
         if function_name in ["add_event", "update_event"]:
